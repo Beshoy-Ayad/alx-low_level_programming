@@ -1,8 +1,10 @@
 #include <stdio.h>
-/*main Function*/
+/**
+ * main Function
+ * code
+ * */
 int main(void)
 {
-/* code */
 puts("\"Programming is like building a multilingual puzzle");
 return (0);
 }
