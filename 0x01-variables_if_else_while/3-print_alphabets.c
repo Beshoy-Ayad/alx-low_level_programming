@@ -13,11 +13,11 @@ int main(void)
 	{
 		putchar(c);
 	}
-	char d;
+	char C;
 
-	for (d = 'A' ; d <= 'Z' ; d++)
+	for (C = 'A' ; C <= 'Z' ; C++)
 	{
-		putchar(d);
+		putchar(C);
 	}
 	putchar ('\n');
 	return (0);
