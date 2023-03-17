@@ -7,27 +7,37 @@
 
 int main(void)
 {
-	int i, j;
+	int tt;
+	int oo;
+	int t;
+	int o;
 
-	for (i = 0; i < 100; i++)
+	for (tt = '0'; tt <= '9'; tt++)
 	{
-		for (j = 0; j < 100; j++)
+		for (oo = '0'; oo <= '9'; oo++)
 		{
-			if (i < j)
+			for (t = tt; t <= '9'; t++)
 			{
-				putchar((i / 10) + 48);
-				putchar((i % 10) + 48);
-				putchar(' ');
-				putchar((j / 10) + 48);
-				putchar((j % 10) + 48);
-			}
-			if (i != 98 || j != 99)
-			{
-				putchar(',');
-				putchar(' ');
+				for (o = oo + 1; o <= '9'; o++)
+				{
+					putchar(tt);
+					putchar(oo);
+					putchar(' ');
+					putchar(t);
+					putchar(o);
+
+					if (!((tt == '9' && oo == '8') &&
+					      (t == '9' && o == '9')))
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
+				o = '0';
 			}
 		}
 	}
+
 	putchar('\n');
 	return (0);
 }
