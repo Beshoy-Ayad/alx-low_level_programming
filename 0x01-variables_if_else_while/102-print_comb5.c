@@ -4,40 +4,29 @@
  *main - Entry point
  *Return: Always 0 (Success)
  */
-
 int main(void)
-{
-	int tt;
-	int oo;
-	int t;
-	int o;
-
-	for (tt = '0'; tt <= '9'; tt++)
 	{
-		for (oo = '0'; oo <= '9'; oo++)
+		int i, j;
+
+		for (i = 0; i < 100; i++)
 		{
-			for (t = tt; t <= '9'; t++)
-			{
-				for (o = oo + 1; o <= '9'; o++)
+			for (j = 0; j < 100; j++)
+		{
+			if (i < j)
 				{
-					putchar(tt);
-					putchar(oo);
+					putchar((i / 10) + 48);
+					putchar((i % 10) + 48);
 					putchar(' ');
-					putchar(t);
-					putchar(o);
-
-					if (!((tt == '9' && oo == '8') &&
-					      (t == '9' && o == '9')))
-					{
-						putchar(',');
-						putchar(' ');
-					}
+					putchar((j / 10) + 48);
+					putchar((j % 10) + 48);
+					if (i != 98 || j != 99)
+						{		
+							putchar(',');
+							putchar(' ');
+						}
 				}
-				o = '0';
-			}
 		}
-	}
-
+		}
 	putchar('\n');
 	return (0);
-}
+	}
