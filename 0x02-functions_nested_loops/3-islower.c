@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdio.h>
 
 /**
  * _islower - Entry point
@@ -16,5 +15,4 @@ int _islower(int c)
 	{
 		return (0);
 	}
-	_putchar('\n');
 }
