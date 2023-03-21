@@ -9,8 +9,8 @@ int main()
 {
 	int i;
 	int n = 50;
-	int t1 = 1;
-	int t2 = 2;
+	long t1 = 1;
+	long t2 = 2;
 
 	for (i = 1; i <= (n / 2); i++)
 	{
