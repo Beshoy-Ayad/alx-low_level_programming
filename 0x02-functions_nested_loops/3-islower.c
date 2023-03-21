@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <main.h>
 /**
  * _islower - Entry point
  * Return:  1 (Lower), 0 (Upper) 
