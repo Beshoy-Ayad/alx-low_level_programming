@@ -7,9 +7,14 @@
 
 int main(void)
 {
-	char h[] = "_putchar";
-
-	putchar(h[0]);
+	putchar('_');
+	putchar('p');
+	putchar('u');
+	putchar('t');
+	putchar('c');
+	putchar('h');
+	putchar('a');
+	putchar('r');
 	putchar ('\n');
 	return (0);
 }
