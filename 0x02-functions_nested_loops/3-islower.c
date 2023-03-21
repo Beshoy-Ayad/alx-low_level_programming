@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- * _islower - Entry point
- * Return:  1 (Lower), 0 (Upper) 
+ * _islower - Entry pointi
+ * @c: print letter
+ * Return:  1 (Lower), 0 (Upper)
  */
 
 int _islower(int c)
