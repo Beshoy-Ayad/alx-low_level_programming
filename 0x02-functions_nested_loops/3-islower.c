@@ -1,27 +1,20 @@
 #include <stdio.h>
-#include <unistd.h>
+#include <stdio.h>
 
 /**
- * _putchar - Entry point
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * _islower - Entry point
+ * Return:  1 (Lower), 0 (Upper) 
  */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
 
-int main(void)
+int _islower(int c)
 {
-	int r;
-
-	r = 0;
-	while (r < 10)
+	if (c >= 'a' && c <= 'z')
 	{
-		_putchar(r + '0');
-		r++;
+		return (1);
+	}
+	else
+	{
+		return (0);
 	}
 	_putchar('\n');
-	return (0);
 }
