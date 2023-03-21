@@ -5,21 +5,24 @@
  * Return: 0
  */
 
-int main()
+int main(void)
 {
-	int i;
-	int n = 50;
-	long t1 = 1;
-	long t2 = 2;
+	int count;
+	unsigned long fib1 = 0, fib2 = 1, sum;
 
-	for (i = 1; i <= (n / 2); i++)
+	for (count = 0; count < 50; count++)
 	{
-		printf("%li %li ", t1, t2);
-		t1 += t2;
-		t2 += t1;
+		sum = fib1 + fib2;
+		printf("%lu", sum);
+
+		fib1 = fib2;
+		fib2 = sum;
+
+		if (count == 49)
+			printf("\n");
+		else
+			printf(", ");
 	}
-	if (n % 2 == 1)
-		printf("%li", t1);
 
 	return (0);
 }
