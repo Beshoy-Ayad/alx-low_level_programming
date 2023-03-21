@@ -11,14 +11,15 @@ int main()
 	int n = 50;
 	int t1 = 1;
 	int t2 = 2;
-	int nextTerm;
 
-	for (i = 1; i <= n; ++i)
+	for (i = 1; i <= (n / 2); i++)
 	{
-		printf("%d, ", t2);
-		nextTerm = t1 + t2;
-		t1 = t2;
-		t2 = nextTerm;
+		printf("%li %li ", t1, t2);
+		t1 += t2;
+		t2 += t1;
 	}
+	if (n % 2 == 1)
+		printf("%li", t1);
+
 	return (0);
 }
