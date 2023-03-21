@@ -7,10 +7,10 @@
 
 int main()
 {
-	int i = 50;
+	int i;
 	int n = 50;
-	int t1 = 0;
-	int t2 = 1;
+	int t1 = 1;
+	int t2 = 2;
 	int nextTerm;
 
 	for (i = 1; i <= n; ++i)
