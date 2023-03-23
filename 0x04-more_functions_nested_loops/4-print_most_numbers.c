@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_numbers - Entry point
+ * print_most_numbers - Entry point
  * Return:  1 (success)
  */
 
@@ -15,5 +15,5 @@ void print_most_numbers(void)
 			_putchar(i + '0');
 		}
 	}
-	_putchar('\n')
+	_putchar('\n');
 }
