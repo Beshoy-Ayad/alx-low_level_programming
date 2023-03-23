@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_line - prints a straight line in the terminal
+ * print_diagonal - prints a straight line in the terminal
  * @n: number of times the character _ should be printed
  *
  * Return: void
