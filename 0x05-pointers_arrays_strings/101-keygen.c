@@ -11,7 +11,7 @@ int main(void)
 	int len = 64;
 	int sum = 2772;
 	int i, val;
-	char pass[len + 1];
+	char pass[65];
 
 	srand(time(NULL));
 
