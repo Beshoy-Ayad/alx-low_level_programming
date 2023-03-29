@@ -11,6 +11,9 @@ char *cap_string(char *s)
 {
 	char *p = s;
 	int flag = 1;
+	char f[13] = { ' ', '\t', '\n', ',', ';', '.', '!',
+		'?', '"', '(', ')', '{', '}' }
+	int i;
 
 	while (*p)
 	{
@@ -22,11 +25,16 @@ char *cap_string(char *s)
 			flag = 0;
 		}
 	}
-	else if (*p == ' ' || *p == '\t' || *p == '\n' || *p == ',' || *p == ';')
-		else if (*p == '.' || *p == '!' || *p == '?' || *p == '"')
-		else if (*p == '(' || *p == ')' || *p == '{' || *p == '}')
+	else
 	{
-		flag = 1;
+		for (i = 0; i < 13; i++)
+		{
+			if (*p == f[i])
+			{
+				flag = 1;
+				break;
+			}
+		}
 	}
 		p++;
 	}
