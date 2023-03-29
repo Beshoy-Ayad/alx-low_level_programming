@@ -7,24 +7,23 @@
  * @n: number of bytes
  * Return: dest
  */
-
 char *_strncat(char *dest, char *src, int n)
 {
-	int i = 0;
-	int m = 0;
+    char *p = dest;
+    while (*p != '\0')
+    {
+        p++;
+    }
 
-	while (dest[i] != '\0')
-	{
-		i++;
-	}
+    while (*src != '\0' && n > 0)
+    {
+        *p = *src;
+        p++;
+        src++;
+        n--;
+    }
+    *p = '\0';
 
-	while (src[m] != src[n])
-	{
-		dest[i] = src[m];
-		i++;
-		m++;
-	}
-	dest[i] = '\0';
-
-	return (dest);
+    return dest;
 }
+
