@@ -7,6 +7,7 @@
  * @n: number of bytes
  * Return: dest
  */
+
 char *_strncat(char *dest, char *src, int n)
 {
     char *p = dest;
