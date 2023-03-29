@@ -1,8 +1,5 @@
 #include <stdio.h>
-/**
- *  main - void
- *  Return: Alweys (0)
- */
+
 int main(void)
 {
   int n;
