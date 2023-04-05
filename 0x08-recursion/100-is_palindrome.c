@@ -20,7 +20,7 @@ int is_palindrome(char *s)
 			return (0);
 		}
 		i++;
-		j--;
+		len--;
 	}
 	return (1);
 }
