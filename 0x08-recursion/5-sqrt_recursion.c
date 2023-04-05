@@ -10,22 +10,22 @@
 
 int  _sqrt_recursion_helper(int n, int i, int j)
 {
-        if (j < i)
-        {
-                return (-1);
-        }
-        else if ((i * i) == n)
-        {
-                return (i);
-        }
-        else if ((j * j) == n)
-        {
-                return (j);
-        }
-        else
-        {
-                return (_sqrt_recursion_helper(n, i + 1, j - 1));
-        }
+	if (j < i)
+	{
+		return (-1);
+	}
+	else if ((i * i) == n)
+	{
+		return (i);
+	}
+	else if ((j * j) == n)
+	{
+		return (j);
+	}
+	else
+	{
+		return (_sqrt_recursion_helper(n, i + 1, j - 1));
+	}
 }
 
 /**
