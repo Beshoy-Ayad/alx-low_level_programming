@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 	}
 	for (i = 0; i < 5; i++)
 	{
-		if (cents >= coins[i])
+		while (cents >= coins[i])
 		{
 			cents -= coins[i];
 			n_coins++;
