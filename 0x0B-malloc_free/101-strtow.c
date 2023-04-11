@@ -3,67 +3,80 @@
 #include <string.h>
 
 /**
+ * count_words - splits a string into words
+ * @str: string to split
+ *
+ * Return: pointer to an array of strings (words) or NULL if it fails
+ */
+
+int count_words(char *str)
+{
+	int i = 0;
+	int count = 0;
+	int len = strlen(str);
+
+	while (i < len)
+	{
+		while (i < len && str[i] == ' ')
+		{
+			i++;
+		}
+		if (i < len && str[i] != ' ')
+		{
+			count++;
+			while (i < len && str[i] != ' ')
+			{
+				i++;
+			}
+		}
+	}
+
+	return (count);
+}
+
+
+/**
  * strtow - splits a string into words
  * @str: string to split
  *
  * Return: pointer to an array of strings (words) or NULL if it fails
  */
+
 char **strtow(char *str)
 {
+	int i = 0;
+	int j = 0;
+	int k = 0;
+	int len = strlen(str);
 	char **words;
-	int i, j, k, len, count, start, end;
 
 	if (str == NULL || str[0] == '\0')
-		return (NULL);
-	count = 0;
-	i = 0;
-	while (str[i] != '\0')
 	{
-		while (str[i] == ' ')
-			i++;
-		if (str[i] != '\0')
-		{
-			count++;
-			while (str[i] != ' ' && str[i] != '\0')
-				i++;
-		}
+		return (NULL);
 	}
-	if (count == 0)
-		return (NULL);
-	words = malloc(sizeof(char *) * (count + 1));
+
+	words = malloc((count_words(str) + 1) * sizeof(char *));
 	if (words == NULL)
-		return (NULL);
-	i = 0;
-	k = 0;
-	while (str[i] != '\0' && k < count)
 	{
-		while (str[i] == ' ')
+		return (NULL);
+	}
+	while (i < len)
+	{
+		while (i < len && str[i] == ' ')
 			i++;
-		if (str[i] != '\0')
+		if (i < len && str[i] != ' ')
 		{
-			len = 0;
-			start = i;
-			while (str[i] != ' ' && str[i] != '\0')
-			{
-				len++;
+			j = i;
+			while (i < len && str[i] != ' ')
 				i++;
-			}
-			end = i - 1;
-			words[k] = malloc(sizeof(char) * (len + 1));
+			words[k] = malloc((i - j + 1) * sizeof(char));
 			if (words[k] == NULL)
-			{
-				for (j = 0; j < k; j++)
-					free(words[j]);
-				free(words);
 				return (NULL);
-			}
-			for (j = start; j <= end; j++)
-				words[k][j - start] = str[j];
-			words[k][len] = '\0';
+			strncpy(words[k], &str[j], i - j);
+			words[k][i - j] = '\0';
 			k++;
 		}
 	}
 	words[k] = NULL;
 	return (words);
 }
-
