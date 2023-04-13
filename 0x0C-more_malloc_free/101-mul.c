@@ -72,6 +72,13 @@ char *mul(char *num1, char *num2)
 	return (res);
 }
 
+/**
+ * main - multiplies two positive numbers
+ * @argc: first number to multiply
+ * @argv: second number to multiply
+ *
+ * Return: pointer to the result or NULL on failure
+ */
 int main(int argc, char **argv)
 {
 	unsigned int i;
