@@ -105,7 +105,7 @@ int main(int argc, char **argv)
 	if (*res == '\0')
 		_putchar('0');
 	else
-		_puts(res);
+		puts(res);
 	_putchar('\n');
 
 	free(res);
