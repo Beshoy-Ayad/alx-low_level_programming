@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -69,4 +70,44 @@ char *mul(char *num1, char *num2)
 		res++;
 
 	return (res);
+}
+
+int main(int argc, char **argv)
+{
+	unsigned int i;
+	char *res;
+
+	if (argc != 3)
+	{
+		printf("Error\n");
+		return (98);
+	}
+
+	for (i = 0; argv[1][i]; i++)
+		if (!_isdigit(argv[1][i]))
+		{
+			printf("Error\n");
+			return (98);
+		}
+	for (i = 0; argv[2][i]; i++)
+		if (!_isdigit(argv[2][i]))
+		{
+			printf("Error\n");
+			return (98);
+		}
+	res = mul(argv[1], argv[2]);
+	if (res == NULL)
+	{
+		printf("Error\n");
+		return (98);
+	}
+
+	if (*res == '\0')
+		_putchar('0');
+	else
+		_puts(res);
+	_putchar('\n');
+
+	free(res);
+	return (0);
 }
