@@ -8,7 +8,7 @@
 
 size_t print_list(const list_t *h)
 {
-	size_t num_nodes_printed = 0;
+	size_t p = 0;
 
 	while (h)
 	{
@@ -22,7 +22,7 @@ size_t print_list(const list_t *h)
 		}
 		h = h->next;
 
-		num_nodes_printed++;
+		p++;
 	}
-	return (num_nodes_printed);
+	return (p);
 }
