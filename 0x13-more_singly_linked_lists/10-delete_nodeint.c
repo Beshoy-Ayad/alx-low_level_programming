@@ -10,8 +10,8 @@
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	listint_t *current;
-	ulistint_t *temp;
-	nsigned int i = 0;
+	listint_t *temp;
+	unsigned int i = 0;
 
 	if (head == NULL || *head == NULL)
 		return (-1);
