@@ -1,3 +1,5 @@
+#include "lists.h"
+
 /**
  * listint_len - returns the number of elements in a listint_t list
  * @h: pointer to the listint_t list
