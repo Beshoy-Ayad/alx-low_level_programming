@@ -7,7 +7,7 @@
  * @n: the data of the new node
  * Return: the address of the new element, or NULL if it failed
  */
-dlistint_t *add_dnodeint_end(dlistint_t **head, dlistint_t **tail, const int n)
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	dlistint_t *new;
 
@@ -26,9 +26,11 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, dlistint_t **tail, const int n)
 		return (new);
 	}
 
-	new->prev = *tail;
-	(*tail)->next = new;
-	*tail = new;
+	last = *head;
+	while (last->next != NULL)
+		last = last->next;
+	last->next = new;
+	new->prev = last;
 
 	return (new);
 }
